@@ -1,33 +1,38 @@
 import React from 'react';
+import '../styles/navbarStyle.css'
+import '../styles/lines.css'
 
 const Navbar = () => {
     return(
         <nav>
-            <div className="row" style={{height:"600px", backgroundColor:"#7B241C", borderTop:"3px solid #212F3D", borderBottom:"3px solid #212F3D", marginBottom:"20px"}}>
-                <div className="col" style={{
-                        backgroundImage:`url("https://images.unsplash.com/photo-1533134486753-c833f0ed4866?ixlib=rb-1.2.1&w=1000&q=80")`, 
-                        backgroundRepeat:"no-repeat", 
-                        backgroundSize:"cover",
-                        borderLeft:"5px solid white"
-                }}>
-                    <p style={{
-                        textAlign:"center", 
-                        paddingTop:"250px",  
-                        fontFamily:"Century Gothic", 
-                        color:"white",
-                    }}>
-                        <h2 style={{fontSize:"70px", marginBottom:"25px"}}>İ L H A N&nbsp;&nbsp;&nbsp;Ü N L Ü</h2>
-                        <p style={{fontSize:"35px"}}>SOFTWARE&nbsp;&nbsp;DEVELOPER</p>
-                        <p style={{fontSize:"70px"}}>~</p>
-                    </p>
+            <div className="row">
+                <div className="col">
+                    <section className="p15">
+                        <div class="lines">
+                            <div class="line"></div>
+                            <div class="line"></div>
+                        </div>
+                        <a href="">İlhan Ünlü
+                            <div className="t1">
+                                <div className="in"></div>
+                            </div>
+                            <div className="t2">
+                                <div className="in"></div>
+                            </div>
+                        </a>
+	                </section>
+                    <div className="p15-text">
+                        <p>Software Developer</p>
+                    </div>
+                    <div className="p15">
+                        <ul class="social-network social-circle">
+                        <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" class="icoGoogle" title="İnstagram"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
                 </div>
-                <style jsx>{`
-                    .nav-link{
-                        color: white;
-                        font-size: 20px
-                    }
-                `}</style>
-            </div> */}
+            </div>
         </nav>
     )
 }

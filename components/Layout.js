@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Navbar from './Navbar'
 import PopularTags from '../components/PopularTags';
 import LastPosts from '../components/LastPosts';
+import '../styles/layoutStyle.css'
 
 const Layout = ({ children, title }) => {
     return(
@@ -11,13 +12,13 @@ const Layout = ({ children, title }) => {
                 <title>Sa</title>
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
                 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
-                <script src="https://github.com/tengbao/vanta/blob/master/vendor/three.r92.min.js"></script>
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
             </Head>
             <header>
                 <Navbar />
             </header>
             <main>
-                <div className="ui container" style={{width:"80%"}}>
+                <div className="ui container main" style={{width:"80%"}}>
                     <div className="ui two column stackable grid">
                         <div className="eleven wide column">
                             { children }

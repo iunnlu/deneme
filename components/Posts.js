@@ -1,8 +1,7 @@
 import React from 'react';
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
-import "./stil.css";
-import "./style.css"
+import "../styles/postsStyle.css";
 
 class Posts extends React.Component{
     renderPosts(){
