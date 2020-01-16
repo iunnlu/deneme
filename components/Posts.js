@@ -17,7 +17,7 @@ class Posts extends React.Component{
                       </div>
                       <div className="col-10" style={{paddingLeft:"10px"}}>
                         <p>
-                        İlhan Ünlü
+                        İlhan Ünlüüü
                         <br />
                         <small className="text-muted">Last updated 3 mins ago</small>
                         </p>
