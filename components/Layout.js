@@ -12,13 +12,13 @@ const Layout = ({ children, title }) => {
                 <title>Sa</title>
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
                 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
-                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
             </Head>
             <header>
                 <Navbar />
             </header>
             <main>
-                <div className="ui container main" style={{width:"80%"}}>
+                <div className="ui container main" style={{width:"90%"}}>
                     <div className="ui two column stackable grid">
                         <div className="eleven wide column">
                             { children }

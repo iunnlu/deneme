@@ -4,7 +4,6 @@ import Layout from '../components/Layout';
 import Posts from '../components/Posts';
 
 class Home extends React.Component{
-  
   render(){
     return(
       <Layout>

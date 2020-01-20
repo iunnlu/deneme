@@ -25,10 +25,10 @@ const Navbar = () => {
                         <p>Software Developer</p>
                     </div>
                     <div className="p15">
-                        <ul class="social-network social-circle">
-                        <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#" class="icoGoogle" title="İnstagram"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                        <ul className="social-network social-circle">
+                        <li><a href="#" className="icoFacebook" title="Facebook"><i className="fa fa-facebook"></i></a></li>
+                        <li><a href="#" className="icoGoogle" title="İnstagram"><i className="fa fa-instagram"></i></a></li>
+                        <li><a href="#" className="icoLinkedin" title="Linkedin"><i className="fa fa-linkedin"></i></a></li>
                         </ul>
                     </div>
                 </div>
