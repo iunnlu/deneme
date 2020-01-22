@@ -6,15 +6,15 @@ import WriteComment from '../components/WriteComment';
 const BlogPost = ({ post }) => (
   <Layout>
       <Post post={post}/>
-      <WriteComment />
+      <WriteComment post={post}/>
   </Layout>
 );
 
 BlogPost.getInitialProps = async ({ req, query }) => {
   // TODO: aşağıdaki satırda bulunan adresi kendi sunucu adresinle değiştirmelisin
-  const res = await fetch(`http://localhost:3000/api/post/${query.postId}`);
-  const json = await res.json();
-  return { post: json.post };
+  const resPost = await fetch(`http://localhost:3000/api/post/${query.postId}`);
+  const jsonPost = await resPost.json();
+  return { post: jsonPost.post };
 };
 
 export default BlogPost;

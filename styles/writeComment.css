@@ -25,4 +25,13 @@
 
 .custom-comment-card {
     color: #3a3a3a;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.custom-danger-text{
+    color:red;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 15px;
 }
