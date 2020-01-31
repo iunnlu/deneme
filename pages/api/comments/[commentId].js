@@ -1,10 +1,11 @@
-import { getComments } from "../../../src/comments";
+import { commentsRef } from '../../../components/database';
 
-const getcomments = getComments();
-
-export default (req, res) => {
-  console.log(getcomments)
-  res.json({
-    comments: getcomments.filter(comment => comment.postId === parseInt(req.query.commentId))
+export default async (req, res) => {
+  let array = [];
+  commentsRef.orderByChild("postSlug").equalTo(req.query.commentId).on("value", async (snapshot) => {
+    await snapshot.forEach((childSnapshot) => {
+      array.push(childSnapshot.val())
+    })
+    return res.json({comments: array})
   });
-};
+}

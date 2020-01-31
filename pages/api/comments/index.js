@@ -1,12 +1,12 @@
-import {postsRef} from '../../components/database';
+import {commentsRef} from '../../../components/database';
 
 export default async (req, res) => {
   const array = [];
-  postsRef.once("value", snapshot => {
+  commentsRef.once("value", snapshot => {
     snapshot.forEach(childSnapshot => {
       array.push(childSnapshot.val())
     })
-    return res.json({posts: array })
+    res.json({ comments: array });
   })
 };
   

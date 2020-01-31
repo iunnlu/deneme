@@ -1,10 +1,7 @@
-import { getPosts } from "../../../src/blog-posts";
+import {postsRef} from '../../../components/database';
 
-const posts = getPosts();
-
-export default (req, res) => {
-  console.log(posts)
-  res.json({
-    post: posts.find(post => post.slug === req.query.postId)
+export default async (req, res) => {
+  await postsRef.orderByChild("slug").equalTo(req.query.postId).on("child_added", function (snapshot) {
+    res.json({ post: snapshot.val() })
   });
 };

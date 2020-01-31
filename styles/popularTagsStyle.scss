@@ -1,0 +1,11 @@
+.custom-button{
+    cursor: pointer;
+    margin-right: 10px;
+}
+.custom-button:hover{
+    background-color: #222222;
+}
+.custom-button:focus{
+    box-shadow: none !important;
+    background-color: #0f0f0f;
+}

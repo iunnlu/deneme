@@ -1,0 +1,25 @@
+.admin-login{
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    right: 30%;
+    box-shadow: -2px 3px 19px -1px rgba(148,148,148,1);
+}
+@media (max-width: 576px) {
+    .admin-login{
+        left: 5%;
+        right: 5%;
+    }
+}
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .admin-login{
+        left: 10%;
+        right: 10%;
+    }
+}
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .admin-login{
+        left: 20%;
+        right: 20%;
+    }
+}

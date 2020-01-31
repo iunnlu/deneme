@@ -9,16 +9,19 @@ module.exports = withCSS({
    }
  });*/
 
+const withImages = require('next-images')
 const withCSS = require('@zeit/next-css');
 const withSass = require('@zeit/next-sass')
-module.exports = withSass(
-  withCSS({
-    webpack: config => {
-       config.module.rules.push({
+module.exports = withImages(
+  withSass(
+    withCSS({
+      webpack: config => {
+        config.module.rules.push({
           test: /\.md$/,
           use: "raw-loader"
         });
-       return config;
-    }
-  })
-)
+        return config;
+      }
+    })
+  )
+) 

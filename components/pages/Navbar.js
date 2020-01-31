@@ -1,18 +1,18 @@
 import React from 'react';
-import '../styles/navbarStyle.css'
-import '../styles/lines.css'
+import '../../styles/navbarStyle.css'
+import '../../styles/lines.css';
 
 const Navbar = () => {
     return(
         <nav>
-            <div className="row">
-                <div className="col">
+            <div className="nav-row">
+                <div className="col" style={{padding:"0px"}}>
                     <section className="p15">
-                        <div class="lines">
+                        <div style={{margin:"0px"}} class="lines">
                             <div class="line"></div>
                             <div class="line"></div>
                         </div>
-                        <a href="">İlhan Ünlü
+                        <a className="custom-title" href="">İlhan Ünlü
                             <div className="t1">
                                 <div className="in"></div>
                             </div>
@@ -26,9 +26,9 @@ const Navbar = () => {
                     </div>
                     <div className="p15">
                         <ul className="social-network social-circle">
-                        <li><a href="#" className="icoFacebook" title="Facebook"><i className="fa fa-facebook"></i></a></li>
-                        <li><a href="#" className="icoGoogle" title="İnstagram"><i className="fa fa-instagram"></i></a></li>
-                        <li><a href="#" className="icoLinkedin" title="Linkedin"><i className="fa fa-linkedin"></i></a></li>
+                            <li><a href="#" className="icoFacebook" title="Facebook"><i className="fa fa-facebook"></i></a></li>
+                            <li><a href="#" className="icoGoogle" title="İnstagram"><i className="fa fa-instagram"></i></a></li>
+                            <li><a href="#" className="icoLinkedin" title="Linkedin"><i className="fa fa-linkedin"></i></a></li>
                         </ul>
                     </div>
                 </div>

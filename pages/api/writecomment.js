@@ -1,39 +1,19 @@
-import { getPosts } from "../../src/blog-posts";
-import { getComments } from "../../src/comments";
+import { commentsRef } from '../../components/database';
 
-const posts = getPosts();
-const fetchComments = getComments();
-
-const deneme = async (req, res) =>{
-    if(req.method === 'POST'){
-        const fs = require('fs');
-        const source = 'src/comments/comments.json';
-        let newItem = {};
-        let id=0;
-        if(fetchComments === []){
-            id=0;
-        }else{
-            await fetchComments.map(item => {
-                id = item.commentId;
-            })
+const writecomment = (req, res) => {
+    if (req.method === 'POST') {
+        const currentDate = new Date().getTime();
+        let object = {
+            postSlug: req.body.postSlug,
+            name: req.body.name,
+            surname: req.body.surname,
+            comment: req.body.comment,
+            date: currentDate
         }
-        await posts.map(item => {
-            if(req.body.postId === item.id){
-                newItem.commentId = id+1;
-                newItem.postId = item.id;
-                newItem.name = req.body.name;
-                newItem.surname = req.body.surname;
-                newItem.comment = req.body.comment;
-                fetchComments.push(newItem);
-            }
-        })
-
-        let data = JSON.stringify(fetchComments, null, 2);
-        fs.writeFile(source, data, (err) => {
-            if (err) throw res.send(404);
-            res.send(200);
-        });
+        commentsRef.push().set(object)
+        res.send(200);
+        res.end("Post write completed\n");
     }
 }
 
-export default deneme;
+export default writecomment;

@@ -33,14 +33,19 @@
 .custom-posts {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.4s;
+    border: 1px solid #B3B6B7;
+    cursor: pointer;
+    .custom-posts-title{
+        text-decoration: none;
+        color: black;
+        font-size: 30px; 
+    }
+    .custom-posts-text{
+        max-height: 300px;
+        overflow: hidden;
+        text-align: justify;
+    }
+    .custom-posts:hover {
+        box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
+    }
 }
-  
-.custom-posts:hover {
-    box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
-}
-
-.custom-post {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-}
-  
