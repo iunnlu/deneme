@@ -26,7 +26,7 @@
     "react-markdown": "^4.2.2",
     "react-media": "^1.10.0",
     "react-share": "^4.0.1",
-    "three": "^0.112.1"
+    "three": "^0.125.0"
   },
   "devDependencies": {
     "body-parser": "^1.19.0",
